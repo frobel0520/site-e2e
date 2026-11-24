@@ -53,7 +53,10 @@ try {
           },
           channel() {
             return {
-              on(_kind, _filter, callback) {
+              on(kind, filter, callback) {
+                if (kind !== 'postgres_changes' || filter.schema !== 'public' || filter.table !== 'mushroom_timers') {
+                  throw new Error('Unexpected fixture Realtime subscription');
+                }
                 window.sendFixtureUpdate = callback;
                 return { subscribe() {} };
               },
@@ -73,6 +76,7 @@ try {
   await first.getByRole('spinbutton', { name: '合成點位 A 分鐘' }).fill('2');
   await first.getByRole('button', { name: '開始倒數！' }).click();
   await expect(first.locator('.timer-display')).toHaveText('00:07:00');
+  await expect(first.locator('.timer-display')).toHaveClass(/\bcounting\b/);
   await expect(first.getByRole('spinbutton', { name: '合成點位 A 分鐘' })).toHaveValue('');
   assert.deepEqual(await page.evaluate(() => window.fixtureWrites), [
     {
@@ -86,6 +90,8 @@ try {
     new: { point_name: point, rebirth_at: rebirth },
   }), { point: syntheticPoints.col1[0], rebirth: now + 60_000 });
   await expect(first.locator('.timer-display')).toHaveText('00:01:00');
+  // app.js switches from counting to active when the countdown is within five minutes.
+  await expect(first.locator('.timer-display')).not.toHaveClass(/\bcounting\b/);
   await expect(first.locator('.timer-display')).toHaveClass(/\bactive\b/);
 
   assert.deepEqual(externalRequests, []);
