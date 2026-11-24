@@ -15,7 +15,7 @@
 
 - [x] `nihongo-lab`（`suites/nihongo-lab/`）
 - [ ] `learning-atlas`
-- [ ] `curio-lab`
+- [x] `curio-lab`（`suites/curio-lab/`）
 - [ ] `left-foot-right-foot`
 - [ ] `little-days`
 - [ ] `pikmin-mushroom-room`
