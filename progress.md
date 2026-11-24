@@ -18,8 +18,10 @@
 - [x] `curio-lab`（`suites/curio-lab/`）
 - [ ] `left-foot-right-foot`
 - [x] `little-days`（`suites/little-days/`）
-- [ ] `pikmin-mushroom-room`
-- [ ] `typing-lab`
-- [ ] `motorcycle-simulator-rebuild`
 
 > 明確排除：需要真實 Google 帳號登入、或含個人／家庭內部資料的私有站點（如 `Family` 私有內部頁與 `harbor` Owner 管理頁）。
+>
+> 已移出 Phase 2（Owner 2026-11-24 決定）：
+> - `pikmin-mushroom-room`：網址僅限家人私下分享，且操作會寫入家人共用資料庫。
+> - `typing-lab`：Windows 桌面程式，沒有公開網頁。
+> - `motorcycle-simulator-rebuild`：Unity 專案，沒有網頁版。
