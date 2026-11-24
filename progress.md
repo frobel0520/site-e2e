@@ -16,7 +16,7 @@
 - [x] `nihongo-lab`（`suites/nihongo-lab/`）
 - [x] `learning-atlas`（`suites/learning-atlas/`）
 - [x] `curio-lab`（`suites/curio-lab/`）
-- [ ] `left-foot-right-foot`
+- [x] `left-foot-right-foot`（`suites/left-foot-right-foot/`）
 - [x] `little-days`（`suites/little-days/`）
 - [x] `pikmin-mushroom-room`（[本機隔離 fixture](suites/pikmin-mushroom-room/spec.md) 通過）
 - [x] `typing-lab`（依核准範圍改採 [原生桌面驗收](https://github.com/frobel0520/typing-lab/pull/8)：Windows Python 3.14.4／Tk 以合成句子及暫存設定執行 2 項測試，涵蓋英文錯鍵、注音組字及統計保存）
