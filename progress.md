@@ -14,7 +14,7 @@
 以下公開站點適合拆分為獨立 Harbor 任務，由不同 Agent 依據各專案文件撰寫 `suites/<slug>/spec.md` 與 `e2e.spec.ts`：
 
 - [x] `nihongo-lab`（`suites/nihongo-lab/`）
-- [ ] `learning-atlas`
+- [x] `learning-atlas`（`suites/learning-atlas/`）
 - [x] `curio-lab`（`suites/curio-lab/`）
 - [ ] `left-foot-right-foot`
 - [x] `little-days`（`suites/little-days/`）
