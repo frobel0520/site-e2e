@@ -17,7 +17,7 @@
 - [ ] `learning-atlas`
 - [ ] `curio-lab`
 - [ ] `left-foot-right-foot`
-- [ ] `little-days`
+- [x] `little-days`（`suites/little-days/`）
 - [ ] `pikmin-mushroom-room`
 - [ ] `typing-lab`
 - [ ] `motorcycle-simulator-rebuild`

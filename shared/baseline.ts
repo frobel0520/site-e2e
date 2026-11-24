@@ -11,6 +11,8 @@ export interface BaselineOptions {
   checkMobileOverflow?: boolean;
   /** Allowable pixel tolerance for scrollWidth vs innerWidth. Default: 1 */
   overflowTolerancePx?: number;
+  /** Require visible DOM text. Disable only for canvas-only apps (e.g. WebGL games). Default: true */
+  requireVisibleText?: boolean;
 }
 
 export interface BaselineResult {
@@ -50,6 +52,7 @@ export async function runSiteBaseline(
     checkColorSchemes = true,
     checkMobileOverflow = true,
     overflowTolerancePx = 1,
+    requireVisibleText = true,
   } = options;
 
   const targetOrigin = new URL(url).origin;
@@ -97,9 +100,11 @@ export async function runSiteBaseline(
   const title = (await page.title()).trim();
   expect(title.length, `Expected non-empty <title> on ${url}`).toBeGreaterThan(0);
 
-  // Visible text exists
-  const bodyTextLength = await page.evaluate(() => (document.body?.innerText ?? '').trim().length);
-  expect(bodyTextLength, `Expected visible body text on ${url}`).toBeGreaterThan(0);
+  // Visible text exists (canvas-only apps opt out explicitly)
+  if (requireVisibleText) {
+    const bodyTextLength = await page.evaluate(() => (document.body?.innerText ?? '').trim().length);
+    expect(bodyTextLength, `Expected visible body text on ${url}`).toBeGreaterThan(0);
+  }
 
   // No broken visible images
   const brokenImages = await page.evaluate(() => {
