@@ -16,7 +16,7 @@
 - [ ] `nihongo-lab`
 - [ ] `learning-atlas`
 - [ ] `curio-lab`
-- [ ] `left-foot-right-foot`
+- [x] `left-foot-right-foot`（`suites/left-foot-right-foot/`）
 - [ ] `little-days`
 - [ ] `pikmin-mushroom-room`
 - [ ] `typing-lab`
