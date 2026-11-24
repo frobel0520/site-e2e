@@ -18,7 +18,7 @@
 - [x] `curio-lab`（`suites/curio-lab/`）
 - [ ] `left-foot-right-foot`
 - [x] `little-days`（`suites/little-days/`）
-- [ ] `pikmin-mushroom-room`
+- [x] `pikmin-mushroom-room`（[本機隔離 fixture](suites/pikmin-mushroom-room/spec.md) 通過）
 - [ ] `typing-lab`
 - [ ] `motorcycle-simulator-rebuild`
 
