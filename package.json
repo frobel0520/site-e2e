@@ -1,0 +1,21 @@
+{
+  "name": "site-e2e",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Spec-driven cross-site Playwright E2E testing hub for public web projects.",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "playwright test",
+    "test:site": "playwright test --grep",
+    "check": "npm run typecheck && npm test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.0",
+    "typescript": "^5.8.3"
+  }
+}
