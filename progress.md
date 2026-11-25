@@ -20,6 +20,7 @@
 - [x] `little-days`（`suites/little-days/`）
 - [x] `pikmin-mushroom-room`（[本機隔離 fixture](suites/pikmin-mushroom-room/spec.md) 通過）
 - [x] `typing-lab`（依核准範圍改採 [原生桌面驗收](https://github.com/frobel0520/typing-lab/pull/8)：Windows Python 3.14.4／Tk 以合成句子及暫存設定執行 2 項測試，涵蓋英文錯鍵、注音組字及統計保存）
-- [ ] `motorcycle-simulator-rebuild`
 
+> `motorcycle-simulator-rebuild` 是沒有網頁版的 Unity 專案，2026-11-25 Owner 決定移出 Phase 2，任務已取消。
+>
 > 明確排除：需要真實 Google 帳號登入、或含個人／家庭內部資料的私有站點（如 `Family` 私有內部頁與 `harbor` Owner 管理頁）。
